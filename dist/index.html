@@ -112,11 +112,12 @@ body{
   background:#EDEDED; clip-path:polygon(0 0,100% 0,100% 55%,50% 100%,0 55%);
 }
 .chip{
-  position:absolute; inset-inline-start:8px; display:flex; flex-direction:column; line-height:1.1;
+  position:absolute; inset-inline-start:8px; display:flex; flex-direction:column; align-items:center;
+  min-width:66px; line-height:1.1;
   background:rgba(0,0,0,.72); border:1px solid rgba(255,255,255,.16);
   border-radius:8px; padding:4px 8px; transition:border-color .2s,box-shadow .2s;
 }
-.chip b{font-size:13px;font-weight:800;color:var(--yellow);direction:ltr;unicode-bidi:isolate}
+.chip b{font-size:13px;font-weight:800;color:var(--yellow);direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
 .chip i{font-size:10px;font-style:normal;color:#C2C2C2}
 .lane.is-next .chip{border-color:var(--yellow);box-shadow:0 0 0 2px rgba(255,212,0,.3)}
 .lane.is-next .diamond{animation:target 1.1s ease-in-out infinite}
