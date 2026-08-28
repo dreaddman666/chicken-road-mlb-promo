@@ -1,0 +1,14 @@
+{
+  "name": "chicken-road-mlb-promo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Промо-прототип Chicken Road x Melbet для GEO Algeria: одноэкранный mobile-first лендинг, AR/FR, CTA с UTM.",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node scripts/serve.js dist 8787",
+    "serve:src": "node scripts/serve.js . 8787",
+    "qa": "node scripts/qa.js http://127.0.0.1:8787/ ./report",
+    "proof": "node scripts/analytics-proof.js http://127.0.0.1:8787/ ./report"
+  },
+  "license": "UNLICENSED"
+}

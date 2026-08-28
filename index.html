@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chicken Road × Melbet</title>
+<meta name="description" content="Chicken Road × Melbet — démo promo mobile : frappe les balles, avance de manche en manche, encaisse quand tu veux.">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0A0A'/%3E%3Ccircle cx='16' cy='18' r='7' fill='%23fff'/%3E%3Cpath d='M16 21l3 3h-6z' fill='%23F2A33C'/%3E%3Cpath d='M9.5 14a6.5 6.5 0 0 1 13 0z' fill='%23FFD400'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<svg class="sprites" aria-hidden="true" focusable="false"><defs>
+  <symbol id="spr-chicken" viewBox="0 0 48 56">
+    <ellipse cx="24" cy="52.5" rx="11" ry="2.6" fill="rgba(6,18,34,.28)"/>
+    <path d="M17.5 42.5v6M30.5 42.5v6M13.5 48.5h8M26.5 48.5h8" stroke="#F2A33C" stroke-width="3.2" stroke-linecap="round"/>
+    <ellipse cx="24" cy="32.5" rx="13" ry="12.2" fill="#FFFFFF"/>
+    <ellipse cx="12.6" cy="32.8" rx="4.4" ry="7.8" fill="#ECE7DA"/>
+    <ellipse cx="35.4" cy="32.8" rx="4.4" ry="7.8" fill="#ECE7DA"/>
+    <path d="M24 24c-4 0-7 3-7 7h14c0-4-3-7-7-7z" fill="#FFD400" opacity=".9"/>
+    <circle cx="24" cy="17.5" r="9.4" fill="#FFFFFF"/>
+    <path d="M24 19.6l3.6 3.6h-7.2z" fill="#F2A33C"/>
+    <circle cx="20.6" cy="16.6" r="1.55" fill="#12233B"/>
+    <circle cx="27.4" cy="16.6" r="1.55" fill="#12233B"/>
+    <path d="M14.6 13.4a9.4 9.4 0 0 1 18.8 0z" fill="#141414"/>
+    <path d="M33.4 13.4h6.9c1 0 1.3 1.2.4 1.7-2.4 1.4-4.9 2-7.3 2z" fill="#FFD400"/>
+    <circle cx="24" cy="7.4" r="1.35" fill="#FFD400"/>
+  </symbol>
+  <symbol id="spr-ball" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="7.1" fill="#FDFBF5" stroke="#CFC8B8" stroke-width=".8"/>
+    <path d="M3.7 3.2C5.5 5.3 5.5 10.7 3.7 12.8M12.3 3.2c-1.8 2.1-1.8 7.5 0 9.6" stroke="#BA0C2F" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="spr-bat" viewBox="0 0 12 34">
+    <rect x="4.2" y="25" width="3.6" height="8" rx="1.8" fill="#7C4A22"/>
+    <path d="M6 1.2c2.1 0 3.5 2.9 3.5 9.4S8 25.6 6 25.6s-3.5-8.5-3.5-15S3.9 1.2 6 1.2z" fill="#C98A4B"/>
+    <path d="M6 1.2c1.2 0 2.1 2.9 2.1 9.4s-.9 15-2.1 15z" fill="#E2A76B"/>
+  </symbol>
+  <symbol id="ic-1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".45"/></symbol>
+  <symbol id="ic-2" viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-3" viewBox="0 0 24 24"><path d="M4 10h16v10H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6h18v4H3zM12 6v14" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+</defs></svg>
+
+<main class="screen">
+
+  <header class="bar">
+    <span class="brand">
+      <b class="logo" data-i18n="brand.logo">MELBET</b>
+      <i data-i18n="brand.game">CHICKEN ROAD</i>
+    </span>
+    <button class="lang" id="lang" type="button" aria-label="Français"><span data-i18n="switchTo">FR</span></button>
+  </header>
+
+  <section class="offer">
+    <p class="kicker" data-i18n="kicker">عرض حصري</p>
+    <h1 class="headline" data-i18n="headline">اعبر الملعب واظفر بالهوم ران</h1>
+    <p class="deal" data-i18n="offer">باقة ترحيب 200% حتى 20.000 دج</p>
+  </section>
+
+  <div class="field" id="field" aria-hidden="true">
+    <div class="track" id="track"></div>
+    <span class="pitch" id="pitch"><svg viewBox="0 0 16 16"><use href="#spr-ball"/></svg></span>
+    <div class="runner" id="runner">
+      <span class="sprite">
+        <svg class="chick" viewBox="0 0 48 56"><use href="#spr-chicken"/></svg>
+        <span class="bat"><svg viewBox="0 0 12 34"><use href="#spr-bat"/></svg></span>
+      </span>
+      <span class="dust" id="dust"></span>
+      <span class="burst" id="burst"></span>
+    </div>
+    <div class="flash" id="flash"></div>
+  </div>
+
+  <section class="panel">
+    <p class="status" id="status" aria-live="polite">
+      <span class="tag" id="tag" data-i18n="status.idle">وضع تجريبي</span>
+      <b class="mult" id="mult" dir="ltr"></b>
+      <span class="hint" id="hint" data-i18n="hint.idle">تقدّم شوطًا بعد شوط، أو اسحب مبكرًا</span>
+    </p>
+    <div class="controls">
+      <button class="btn btn--cash" id="cash" type="button" hidden>
+        <span data-i18n="btn.cash">اسحب الآن</span><b class="cash-mult" id="cashMult" dir="ltr"></b>
+      </button>
+      <button class="btn btn--play" id="play" type="button" data-i18n="btn.start">ابدأ اللعب</button>
+    </div>
+    <a class="btn btn--cta" id="cta" href="https://chicken-road-mlb-promo.com" rel="nofollow noopener" target="_blank" data-i18n="cta">احصل على الباقة</a>
+    <p class="legal" data-i18n="legal">عرض تجريبي: بدون رهان أو دفع أو أرباح حقيقية. 18+، العب بمسؤولية.</p>
+  </section>
+
+</main>
+
+<section class="how">
+  <h2 data-i18n="steps.title">ثلاث خطوات</h2>
+  <ol>
+    <li><svg viewBox="0 0 24 24"><use href="#ic-1"/></svg><span data-i18n="steps.1">العب 20 ثانية</span></li>
+    <li><svg viewBox="0 0 24 24"><use href="#ic-2"/></svg><span data-i18n="steps.2">اسحب مبكرًا أو اذهب للهوم ران</span></li>
+    <li><svg viewBox="0 0 24 24"><use href="#ic-3"/></svg><span data-i18n="steps.3">استلم باقتك</span></li>
+  </ol>
+  <a class="btn btn--cta btn--ghost" id="cta2" href="https://chicken-road-mlb-promo.com" rel="nofollow noopener" target="_blank" data-i18n="cta">احصل على الباقة</a>
+</section>
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
