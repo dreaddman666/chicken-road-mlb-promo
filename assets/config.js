@@ -1,5 +1,5 @@
 window.APP_CONFIG = {
-  ctaUrl: 'https://chicken-road-mlb-promo.com',
+  ctaUrl: 'https://melbet.com',
 
   passthroughParams: [
     'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
